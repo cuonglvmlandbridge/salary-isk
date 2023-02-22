@@ -1,0 +1,20 @@
+.formFilter {
+    padding: 20px;
+}
+
+.formItem label {
+    min-width: 120px;
+}
+
+.formFilter button {
+    height: 40px;
+}
+
+:global(.ant-form-item-control-input-content) {
+    max-width: 250px !important;
+}
+
+.day {
+    text-align: center;
+    font-size: 20px;
+}
