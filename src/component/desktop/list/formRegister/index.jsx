@@ -20,7 +20,7 @@ const FORMAT_TIME = 'HH:mm';
 
 const idApp = kintone.app.getId() || kintone.mobile.app.getId();
 
-const userISK = Cookie.get('nameUserLogin');
+const userISK = Cookie.get('nameUserLoginTest');
 
 function totalRevenueByDay(arr) {
   const result = {};

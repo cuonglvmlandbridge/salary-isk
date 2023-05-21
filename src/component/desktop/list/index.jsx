@@ -20,7 +20,7 @@ const FORMAT_DATE = 'YYYY/MM/DD';
 
 const idApp = kintone.app.getId() || kintone.mobile.app.getId();
 
-const staffIdLogin = Cookie.get('staffIdLogin');
+const staffIdLogin = Cookie.get('staffIdLoginTest');
 
 const FORMAT_DATETIME = 'YYYY/MM/DD HH:mm';
 

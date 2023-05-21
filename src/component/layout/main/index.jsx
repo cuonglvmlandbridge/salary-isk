@@ -18,8 +18,8 @@ import { logout } from '../../../utils/common';
 import { MenuOutlined } from '@ant-design/icons';
 import Cookie from 'js-cookie';
 
-const userISK = Cookie.get('userISK');
-const nameUserLogin = Cookie.get('nameUserLogin');
+const userISK = Cookie.get('userISKTest');
+const nameUserLogin = Cookie.get('nameUserLoginTest');
 
 
 export default function MainLayout({
