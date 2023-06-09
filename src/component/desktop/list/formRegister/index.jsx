@@ -12,7 +12,7 @@ import {ID_APP_STAFF} from '../../../common/const';
 import styles from './styles.module.css';
 import Cookie from 'js-cookie';
 
-const idStaffApp = '6';
+const idStaffApp = ID_APP_STAFF;
 
 const FORMAT_DATE_TIME = 'YYYY/MM/DD';
 const FORMAT_MONTH = 'YYYY/MM';
@@ -266,7 +266,7 @@ export default function FormRegister({
       // tổng ngày user làm
       const totalDay = [...new Set(register.map(val => val.date.value))].length;
       // tổng giờ user làm
-      const times = register.map(val => {
+      let times = register.map(val => {
         const dateExp1 = dayjs(`2000-01-01 ${val.time_in.value}`);
         let dateExp2 = dayjs(`2000-01-01 ${val.time_out.value}`);
         dateExp2 = dateExp1.diff(dateExp2) > 0 ? dayjs(dayjs(dateExp2).add(1, 'day')) : dateExp2;
@@ -274,7 +274,7 @@ export default function FormRegister({
         return timeDiff;
       });
 
-      console.log(times)
+      times = times.filter((value) => !isNaN(value));
       const hours = convertHour(times.reduce((a, b) => a + b, 0) / 1000);
       const totalTime = hours.time;
       // fee trip
