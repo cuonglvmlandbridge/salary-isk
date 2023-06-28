@@ -4,7 +4,8 @@ import {Button} from 'antd';
 import styles from './styles.module.css';
 import {
   ID_APP_CUSTOMER,
-  ID_APP_CUSTOMER_COME, ID_APP_RANK,
+  ID_APP_CUSTOMER_COME, 
+  ID_APP_RANK,
   ID_APP_REGISTER,
   ID_APP_REPORT,
   ID_APP_SALARY,
@@ -12,6 +13,7 @@ import {
   ID_APP_SETTING,
   ID_APP_STAFF,
   ID_APP_TIPS,
+  ID_APP_CONFIG_SETTING,
   URL_WEB
 } from '../../common/const';
 import { logout } from '../../../utils/common';
@@ -134,6 +136,11 @@ export default function MainLayout({
       id: 13,
       text: 'ランク設定',
       onclick: () => window.location.href = `${URL_WEB}/k/${ID_APP_RANK}/`
+    },
+    {
+      id: 14,
+      text: '損益目標設定',
+      onclick: () => window.location.href = `${URL_WEB}/k/${ID_APP_CONFIG_SETTING}/`
     },
     {
       id: 9,
