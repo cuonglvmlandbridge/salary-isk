@@ -12,14 +12,9 @@ import {ID_APP_STAFF} from '../../../common/const';
 import styles from './styles.module.css';
 import Cookie from 'js-cookie';
 
-const idStaffApp = ID_APP_STAFF;
-
 const FORMAT_DATE_TIME = 'YYYY/MM/DD';
 const FORMAT_MONTH = 'YYYY/MM';
-const FORMAT_TIME = 'HH:mm';
-
 const idApp = kintone.app.getId() || kintone.mobile.app.getId();
-
 const userISK = Cookie.get('nameUserLoginTest');
 
 function totalRevenueByDay(arr) {
@@ -390,7 +385,7 @@ export default function FormRegister({
   };
 
   useEffect(() => {
-    fetchAllRecordsCustomer(idStaffApp).then(function(records) {
+    fetchAllRecordsCustomer(ID_APP_STAFF).then(function(records) {
       const data = records.map((val) => ({
         value: JSON.stringify({
           name: val.name.value,
